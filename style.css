@@ -1,0 +1,38 @@
+body{
+   background-color: #d6faee; 
+   padding: 50px;
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 1.5rem;
+}
+.accordian{
+    background-color: white;
+    padding: 5px 16px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 5px #62a991;
+
+}
+.question{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-solid{
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.fa-solid.active{
+    transform: rotate(-180deg);
+}
+.answer{
+    color: #666;
+    /* collapsing the answer */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+/* the transition will not work smoothly as we have not given the hard value to max height so it is hard for css to make transition from 0 to where , but if we try to give value to max height it is not a good practice because what if the answer is bigger than max height so give height - scroll which is not present in css but give from js , so giving active class like this is not a good practice */
+/* .answer.active{
+    max-height: fit-content;
+} */
